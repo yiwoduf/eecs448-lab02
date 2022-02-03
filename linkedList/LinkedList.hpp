@@ -1,9 +1,9 @@
 /**
- *	@author
- *	@date
- *	@file LinkedList.hpp
- *	@brief Implementation file for templated LinkedList class
- */
+*	@author 
+*	@date 
+*	@file LinkedList.hpp
+*	@brief Implementation file for templated LinkedList class
+*/
 
 template <typename T>
 LinkedList<T>::LinkedList() : m_front(nullptr), m_size(0)
@@ -28,7 +28,10 @@ bool LinkedList<T>::isEmpty() const
 template <typename T>
 int LinkedList<T>::size() const
 {
-	return m_size;
+	/** TODO
+		Fix this method
+	*/
+	return (0);
 }
 
 template <typename T>
@@ -37,14 +40,9 @@ bool LinkedList<T>::search(T value) const
 	Node<T> *temp = m_front;
 	bool isFound = false;
 
-	for (int i = 0; i < m_size; i++)
-	{
-		if (temp->getValue() == value)
-		{
-			isFound = true;
-		}
-		temp = temp->getNext();
-	}
+	/** TODO
+		Fix this method
+	*/
 
 	return (isFound);
 }
@@ -99,21 +97,13 @@ void LinkedList<T>::addFront(T value)
 template <typename T>
 bool LinkedList<T>::removeBack()
 {
+	Node<T> *lastNode = nullptr;
 	Node<T> *secondintoLast = nullptr;
 	bool isRemoved = false;
 
-	if (!isEmpty())
-	{
-		secondintoLast = m_front;
-		for (int i = 0; i < m_size - 2; i++)
-		{
-			secondintoLast = secondintoLast->getNext();
-		}
-		delete secondintoLast->getNext();
-		secondintoLast->setNext(nullptr);
-		m_size--;
-		isRemoved = true;
-	}
+	/** TODO
+		Fix this method
+	*/
 
 	return (isRemoved);
 }
